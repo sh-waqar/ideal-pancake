@@ -1,0 +1,25 @@
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: $large-screen) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $medium-screen) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $small-screen) {
+  .container {
+    width: 750px;
+  }
+}
