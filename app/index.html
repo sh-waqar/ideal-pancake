@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ideal Pancakes</title>
+    <title>Trade Application</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,8 +21,18 @@
         </div>
     </header>
 
-    <div class="container">
-        <div>content</div>
+    <div class="container main-content">
+        <form name="feedForm" novalidate ng-submit="vm.requestFeed(feedForm.feedUrl)">
+            <input type="url" 
+                name="feedUrl" 
+                ng-model="vm.feedUrl"
+                ng-pattern="vm.urlRegex">
+            <span ng-show="(feedForm.feedUrl.$dirty || vm.submitted) && !feedForm.feedUrl.$valid">Please enter correct URL.</span>
+        </form>
+
+        <div ng-repeat="feed in vm.feeds">
+            {{feed.productID}}
+        </div>
     </div>
 
     <script type="text/javascript" src="./vendors.js" charset="utf-8"></script>
