@@ -25,7 +25,7 @@
         <feed-form feed-url="vm.feedUrl" make-request="vm.loadFeeds(url)"></feed-form>
 
         <div ng-repeat="feed in vm.feeds">
-            {{feed.productID}}
+            <product-card card-data="feed"></product-card>
         </div>
     </div>
 

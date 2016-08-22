@@ -1,0 +1,21 @@
+<div class="product-card">
+	<div class="product-card-banner">
+		<div class="product-card-banner__image" style="background-image: url({{::vm.cardData.imageURL}})">
+		</div>
+
+		<div class="product-card-price">
+			<small>Price</small>
+			<h3>{{::vm.cardData.price.__text}} {{::vm.cardData.price._currency}}</h3>
+		</div>
+	</div>
+
+	<div class="product-card-content">
+		<h2><a ng-href="{{::vm.cardData.productURL}}">{{::vm.cardData.name}}</a></h2>
+
+		<div class="product-card-content__cat">
+			{{::vm.cardData.categories.category.__text}}
+		</div>
+
+		<p>{{::vm.cardData.description.__cdata}}</p>
+	</div>
+</div>

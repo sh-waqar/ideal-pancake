@@ -15,6 +15,7 @@ class AppController {
   loadFeeds(url) {
     this.requestService(url)
       .then(res => {
+        console.log(res);
         this.feeds = res.products.product;
       });
   }
