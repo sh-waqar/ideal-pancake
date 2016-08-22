@@ -18,6 +18,9 @@ module.exports = {
     }, {
       test: /\.scss$/,
       loader: 'style!css?sourceMap!sass?sourceMap'
+    }, {
+      test: /\.html$/,
+      loader: 'raw'
     }]
   },
   plugins: [

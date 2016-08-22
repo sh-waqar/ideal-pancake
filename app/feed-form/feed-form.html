@@ -1,0 +1,4 @@
+<form name="feedForm" novalidate ng-submit="vm.requestFeed(feedForm.feedUrl)">
+    <input type="url" name="feedUrl" ng-model="vm.feedUrl" ng-pattern="vm.urlRegex" required>
+    <span ng-show="feedForm.feedUrl.$dirty && vm.submitted && !feedForm.feedUrl.$valid">Please enter correct URL.</span>
+</form>

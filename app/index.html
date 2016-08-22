@@ -22,13 +22,7 @@
     </header>
 
     <div class="container main-content">
-        <form name="feedForm" novalidate ng-submit="vm.requestFeed(feedForm.feedUrl)">
-            <input type="url" 
-                name="feedUrl" 
-                ng-model="vm.feedUrl"
-                ng-pattern="vm.urlRegex">
-            <span ng-show="(feedForm.feedUrl.$dirty || vm.submitted) && !feedForm.feedUrl.$valid">Please enter correct URL.</span>
-        </form>
+        <feed-form feed-url="vm.feedUrl" make-request="vm.loadFeeds(url)"></feed-form>
 
         <div ng-repeat="feed in vm.feeds">
             {{feed.productID}}

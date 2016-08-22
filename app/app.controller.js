@@ -5,22 +5,11 @@ class AppController {
     let defaultUrl = 'http://pf.tradetracker.net/?aid=1&type=xml&encoding=utf-8&fid=251713&categoryType=2&additionalType=2&limit=10';
 
     this.$http = $http;
-    this.urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
-    this.showError = false;
+
     this.feedUrl = defaultUrl;
     this.feeds = [];
 
     this.loadFeeds(defaultUrl);
-  }
-
-  requestFeed(formFields) {
-    if (formFields.$invalid) {
-      this.showError = true;
-      return;
-    }
-
-    this.showError = false;
-    loadFeeds(formFields.$viewValue);
   }
 
   loadFeeds(url) {
